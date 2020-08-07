@@ -23,3 +23,12 @@ Now let's take on the challenge of the `src/utils/flatten.js` project.
 ## 2020-08-07 19:31:00
 
 Introduced Jest unit-testing framework to test the expectations for `src/utils/flatten.js`.  Refactored the code to use reducers and checks for objects.
+
+## 2020-08-07 19:50:00
+
+Adding final touches like a `./README.md` and ensuring the quality of the resulting code at this time is as I expect. 
+
+Should I have had more time time I would have liked to use [XState.js](https://xstate.js.org/) to manage the state machine of the API requests and seperate the main component out into smaller focused components on the off-chance they'll benifit from reusability. 
+
+For now everything for this simple example is in one document to keep the state management simple.
+
