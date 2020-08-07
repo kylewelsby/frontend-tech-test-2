@@ -2,7 +2,9 @@
 
 [SamKnows](https://samknows.com/careers/) code challege completed by [Kyle Welsby](https://github.com/kylewelsby).
 
-Here I shall convert the given design in `./__DESIGNS__` to a functional single page application and rewrite `./src/utils/flatten.js` to newer ES2016 standards. 
+Here I shall convert the given design in [`./__DESIGNS__/currency-converter.png`](https://raw.githubusercontent.com/kylewelsby/samknows-code-challege/main/__DESIGNS__/currency-converter.png) to a functional single page application and rewrite [`./src/utils/flatten.js`](https://github.com/kylewelsby/samknows-code-challege/blob/main/src/utils/flatten.js) to newer ES2016 standards. 
+
+👉 https://kylewelsby.github.io/samknows-code-challege/ 👈
 
 ## ⚡️ System Dependencies
 This project requires Node.js to build and run.
