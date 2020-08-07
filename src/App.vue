@@ -9,11 +9,7 @@
     >
       <div class="flex my-2">
         <label for="baseCurrency" class="mr-2">Base</label>
-        <select
-          id="baseCurrency"
-          v-model="baseCurrency"
-          @input="fetchExchangeRates()"
-        >
+        <select id="baseCurrency" v-model="baseCurrency">
           <option v-for="currency of currencies" :key="currency">
             {{ currency }}
           </option>
@@ -44,7 +40,7 @@
       </div>
       <div class="flex-grow flex flex-col align items-end">
         <span> {{ formattedAmount }} {{ baseCurrency }} = </span>
-        <span class="text-2xl lg:text-3xl">
+        <span class="currency-calculation text-2xl lg:text-3xl">
           {{ formattedConversion }} {{ targetCurrency }}
         </span>
       </div>
@@ -73,22 +69,33 @@
 </template>
 
 <script>
-  import currencies from "./supported_currencies.json";
   export default {
     name: "App",
     components: {},
     data() {
       return {
-        currencies,
         amount: 100,
         baseCurrency: "INR",
         targetCurrency: "PLN",
         exchangeRates: {}
       };
     },
+    watch: {
+      baseCurrency(val) {
+        console.log('watch changed', val)
+        this.fetchExchangeRates();
+      }
+    },
     computed: {
       conversion() {
-        return this.exchangeRates[this.targetCurrency] * this.amount;
+        if (Object.keys(this.exchangeRates).length > 0) {
+          return this.exchangeRates[this.targetCurrency] * this.amount;
+        } else {
+          return 0;
+        }
+      },
+      currencies() {
+        return Object.keys(this.exchangeRates).sort();
       },
       formattedAmount() {
         return new Intl.NumberFormat("en-GB", {
