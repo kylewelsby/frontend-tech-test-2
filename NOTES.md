@@ -14,3 +14,8 @@ Committed base skeleton
 
 Wiring up the API to finalise the core functionality, then quickly finish off the design to keep the core ability within given time allocation. 
 
+## 2020-08-07 18:48:00
+
+Implemented the design as provided in the `.png` and ensured it is reactive with best intentions. 
+
+Now let's take on the challenge of the `src/utils/flatten.js` project.
