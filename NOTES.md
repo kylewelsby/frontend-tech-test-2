@@ -19,3 +19,7 @@ Wiring up the API to finalise the core functionality, then quickly finish off th
 Implemented the design as provided in the `.png` and ensured it is reactive with best intentions. 
 
 Now let's take on the challenge of the `src/utils/flatten.js` project.
+
+## 2020-08-07 19:31:00
+
+Introduced Jest unit-testing framework to test the expectations for `src/utils/flatten.js`.  Refactored the code to use reducers and checks for objects.
