@@ -7,4 +7,10 @@ You might notice the re-organisation of the challenge source files to `./__DESIG
 ## 2020-08-07 17:20:00
 The project uses Vue.js with the opinionated Vite builder for simplicity. 
 
-I'm going to get the basic functionality of the project running.  My intent is to use [XState.js](https://xstate.js.org/) and [TailwindCSS](https://tailwindcss.com/).  
+Now I'm going to get the basic functionality of the project running.  My intent is to use [XState.js](https://xstate.js.org/) and [TailwindCSS](https://tailwindcss.com/)
+
+## 2020-08-07 17:49:00
+Committed base skeleton
+
+Wiring up the API to finalise the core functionality, then quickly finish off the design to keep the core ability within given time allocation. 
+

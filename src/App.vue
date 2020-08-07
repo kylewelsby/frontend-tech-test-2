@@ -72,15 +72,30 @@
         }).format(this.conversion);
       }
     },
+    beforeMount() {
+      this.fetchExchangeRates()
+    },
     methods: {
       fetchExchangeRates() {
-        // TODO: When the base currency is changed, the application should fetch new conversion rates
+        return fetch(
+          `https://api.exchangeratesapi.io/latest?base=${this.baseCurrency}`
+        )
+          .then((res) => res.json())
+          .then(data => {
+            this.exchangeRates = data.rates
+          })
+          .catch((err) => {
+            window.alert(
+              "There was a problem fetching exhange rates, please refresh page to try again."
+            );
+            console.error(err);
+          });
       },
       swap() {
-        // TODO: When the 'switch' button is pressed, the values of the base and target are swapped
-      },
-      calculateValue() {
-        // TODO: When an amount is entered into the input, a converted amount is displayed
+        let base = this.baseCurrency.toString()
+        this.baseCurrency = this.targetCurrency.toString()
+        this.targetCurrency = base
+        return this.fetchExchangeRates()
       }
     }
   };
