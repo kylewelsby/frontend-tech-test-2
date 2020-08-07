@@ -37,10 +37,16 @@ The resulting code in `./dist` can be uploaded to your Web Server of choice.
 
 ## 🤖 Testing
 
-Testing is covered by Jest with the following bash command
+Testing is covered by Jest and Cypress with the following bash command
 
+Unit tests
 ```bash
 npm run test
+```
+
+End-to-end tests
+```bash
+npm run test:e2e
 ```
 
 

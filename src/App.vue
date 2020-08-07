@@ -33,7 +33,7 @@
         <label for="amount" class="mr-2 w-1/3 text-right">Amount</label>
         <input
           class="w-2/3"
-          name="amount"
+          id="amount"
           type="number"
           v-model.number="amount"
         />
